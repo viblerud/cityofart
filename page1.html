@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예술의 도시, 파리</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .clear {
+            clear: both;
+        }
+        body {
+            font-family: pretendard;
+        }
+        header {
+            display: flex;
+            height: 60px;
+            margin: 0 auto;
+        }
+        .logo {
+            width: 100px;
+            margin: 28px 0 0 40px;
+        }
+
+        /*menu list*/
+        #menu {
+            margin-top: 38px;
+            margin-left: 20px;
+            align-items: center;
+            float: left;
+            overflow: auto;
+            position: relative;
+        }
+        #menu li {
+            display: inline;
+            margin-left: 40px;
+        }
+        #menu a {
+            text-decoration: none;
+            color: rgba(255, 255, 255);
+            font-weight: 200;
+        }
+        #menu_select {
+            color: white;
+            font-weight: bold;
+        }
+        #menu a:hover {
+            color: white;
+            font-weight: bold;
+            transition: 0.2s ease-out;
+        }  
+        .bgimg {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 800px;
+            background-image: url(./img/bg/파리06.jpg);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: -100px;
+            border-radius: 0 0 50px 50px;
+        }
+        /**/
+        #main_intro {
+            margin: 80px 50px;
+
+        }
+        #main_intro h4 {
+            position: absolute;
+            margin-top: 10px;
+            font-size: 45px;
+            font-weight: 300;
+            letter-spacing: -3px;
+        }
+        #main_intro h3 {
+            position: absolute;
+            margin-top: 60px;
+            font-size: 100px;
+            letter-spacing: -3px;
+        }
+        #main_intro p {
+            position: absolute;
+            width: 1820px;
+            margin-top: 180px;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+            line-height: 2rem;
+        }
+
+        /**/
+        .main_box {
+            display: inline-block;
+            margin: 700px 10px 0 10px;
+            width: 1820px;
+            height: 300px;
+            /* background-color: beige; */
+            border-radius: 50px;
+        }
+        .main_box.bg {
+            background-image: url(./img/bg/루브르05.jpg);
+            background-position: center;
+        }
+        #main_contents{
+            width: 98%;
+            height: 700px;
+            background-image: url(./img/bg/루브르04.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0 19px 30px 19px;
+            border-radius: 50px;
+        }
+        #main_contents_2 {
+            width: 98%;
+            height: 700px;
+            background-image: url(./img/bg/오르세05.jpg);
+            background-position-x: center;
+            background-position-y: -350px;
+            background-repeat: no-repeat;
+            margin: 0 19px 30px 19px;
+            border-radius: 50px;
+        }
+        #main_contents h3, #main_contents_2 h3 {
+            text-align: center;
+            font-size: 80px;
+            letter-spacing: -3px;
+            padding-top: 18rem;
+            font-family: 'Georgia';
+            font-style: italic;
+        }
+        #main_contents p, #main_contents_2 p {
+            text-align: center;
+            font-size: 32px;
+            letter-spacing: -1px;
+            padding-top: 0.1rem;
+            /* font-weight: bold; */
+        }
+        
+
+        .contents-txt {
+            width: 98%;
+            height: auto;
+            margin: 0 19px 50px 19px;
+            /* background-color: rgb(159, 210, 255); */
+        }
+        .contents-txt p {
+            padding: 0 20px;
+            font-size: 20px;
+            line-height: 2rem;
+            letter-spacing: -0.5px;
+        }
+        .contents-txt h3 {
+            padding: 20px 0;
+            font-size: 50px;
+            text-align: center;
+            letter-spacing: -1.5px;
+        }
+        
+        .contents-box {
+            display: inline-block;
+            width: 599px;
+            height: 599px;
+            margin: 20px 19px 0 0;
+            border-radius: 25px;
+            /* background-color: antiquewhite; */
+        }
+        .contents-box.monalisa{
+            margin-left: 38px;
+            background-image: url(./img/bg/모나리자.jpg);
+            background-size: 1300px;
+            background-position-x: center;
+            background-position-y: -690px;
+        }
+        .contents-box.venus{
+            background-image: url(./img/bg/비너스.jpg);
+            background-size: 650px;
+            background-position-x: -50px;
+            background-position-y: -60px;
+            background-repeat: no-repeat;
+        }
+        .contents-box.nike{
+            background-image: url(./img/bg/니케.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /*오르세*/
+        .contents-box.monet{
+            margin-left: 38px;
+            background-image: url(./img/bg/일출.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .contents-box.gogh{
+            background-image: url(./img/bg/반고흐.jpg);
+            background-size: 900px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .contents-box.manet{
+            background-image: url(./img/bg/마네.jpg);
+            background-size: 800px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .contents-box.txt {
+            position: relative;
+            margin: 5px 0 50px 19px;
+            width: 599px;
+            height: 500px;
+        }
+        .contents-box.txt.first {
+            margin-left: 38px;
+        }
+        .contents-box.txt h3{
+            position: absolute;
+            font-size: 30px;
+            letter-spacing: -1.5px;
+            margin-top: 10px;
+            padding: 0 10px;
+        }
+        .contents-box.txt p{
+            position: absolute;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+            line-height: 2.2rem;
+            margin-top: 55px;
+            padding: 0 10px;
+        }
+        /*footer*/
+        footer {
+            width: 1920px;
+            height: 80px;
+            margin: 0 auto;
+            border-top: solid 1px rgb(0, 0, 0);
+            /* background-color: rgba(255, 255, 255, 0.2); */
+        }
+        #footer-box ul{
+            list-style: none;
+            font-size: 13px;
+            padding: 25px 0 0 50px;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="./index.html"><img src="./img/logo.svg" width="100px"></a>
+        </div>
+        <div id="menu">
+            <ul>
+                <li id="menu_select">파리</li>
+                <li><a href="./page2.html">뉴욕</a></li>
+                <li><a href="./page3.html">피렌체</a></li>
+                <li><a href="./page4.html">로마</a></li>
+                <li><a href="./page5.html">베를린</a></li>
+            </ul>
+        </div>
+        <div class="bgimg"></div>
+    </header>
+
+    <div class="clear"></div>
+
+    <section id="main_intro">
+        <div class="main_box">
+            <h4>파리는 왜 예술의 도시일까?</h4>
+            <h3>Pairs</h3>
+            <p>파리는 오랜 역사 속에서 예술 분야의 지대한 발전과 함께 '예술의 도시'라는 명성을 굳건히 쌓아올려 왔습니다. 
+                왕권의 보호와 아카데미 설립, 세계적인 교육 기관과 예술가들의 교류, 주요 예술 운동의 중심지로서의 역할, 풍부한 문화 시설, 활발한 거리 예술과 현대 예술, 
+                예술과 일상의 공존 등 다양한 요인들이 복합적으로 작용하며 파리를 예술의 도시로 만들었습니다.
+                이처럼 파리는 역사적 배경, 문화적 환경, 예술적 분위기가 조화롭게 어우러져 예술 발전에 가장 적합한 토양을 마련했으며, 
+                앞으로도 변화와 발전을 이어가 예술의 도시로서 더욱 빛나는 미래를 만들어갈 것으로 기대됩니다.
+            </p>
+        </div>
+        <!-- <div class="main_box bg"></div> -->
+    </section>
+
+    <div class="clear"></div>
+
+    <!-- 루브르 박물관 -->
+    <section id="main_contents">
+        <h3>Musée du Louvre</h3>
+        <p>루브르 박물관</p>      
+    </section>
+    <section>
+        <div class="contents-txt">
+            <p>프랑스 파리의 중심부에 위치한 루브르 박물관은 세계 최고의 박물관 중 하나로 손꼽힙니다.
+              35,000여 점의 방대한 소장품을 자랑하며, 고대 이집트, 그리스, 로마부터 중세, 르네상스, 
+              현대에 이르기까지 인류 문명의 역사와 예술을 한눈에 감상할 수 있는 곳입니다.
+              루브르 박물관의 명성을 더욱 빛내는 대표 작품으로는 다빈치의 모나리자, 밀로의 비너스, 삼모트라케의 니케 등이 있습니다.
+              특히, 미스터리어스한 미소를 머금은 모나리자는 전 세계 관람객들을 매료시키는 루브르의 상징이라 할 수 있습니다.
+              루브르 박물관은 단순히 예술 작품을 전시하는 공간을 넘어, 그 자체가 역사적 가치를 지닌 곳입니다. 
+              과거 프랑스 왕들의 거처였던 루브르 궁전 건축물은 웅장하고 아름다운 건축 양식으로 관람객들에게 감탄을 선사합니다.
+              매년 수백만 명의 관람객들이 찾는 루브르 박물관은 매주 화요일을 제외하고 매일 운영됩니다. 
+              온라인 또는 현장에서 입장권을 구매할 수 있으며, 다양한 언어 오디오 가이드와 프랑스어, 영어로 진행되는 무료 관람 투어도 제공됩니다.
+              루브르 박물관은 예술과 역사를 사랑하는 모든 사람들에게 잊지 못할 추억을 선사할 특별한 장소입니다.
+            </p>
+        </div>
+        <div class="contents-txt">
+            <h3>루브르 박물관의 유명 작품들</h3>
+        </div>
+        
+        <div class="contents-box monalisa"></div><!-- 모나리자 -->       
+        <div class="contents-box venus"></div>
+        <div class="contents-box nike"></div>
+
+        <div class="contents-box txt first">
+            <h3>모나리자</h3>
+            <p>
+                루브르 박물관의 심장이라 불리는 모나리자는 르네상스 거장 레오나르도 다빈치의 대표작이자 세계에서 가장 유명한 그림 중 하나입니다. 
+                1503년부터 1519년까지 제작된 이 작품은 단순한 여성 초상화를 넘어, 
+                밀실리나라는 기법을 통해 섬세한 음영과 묘한 미소를 표현하여 관람자들에게 수수께끼 같은 매력을 선사합니다. 
+                여성의 얼굴과 풍경을 하나의 연속적인 공간으로 표현하여 작품에 깊이감을 더한 점도 주목할 만합니다.
+                모나리자는 단순한 초상화를 넘어, 이상적인 여성상과 우주의 신비를 담은 작품으로 평가받고 있습니다. 
+                다빈치의 뛰어난 예술적 재능과 섬세한 표현력이 돋보이는 모나리자는 루브르 박물관을 방문하는 모든 사람들에게 잊지 못할 경험을 선사하며, 
+                르네상스 시대 예술의 정수를 보여주는 대표적인 작품입니다.
+            </p>
+        </div>
+        <div class="contents-box txt">
+            <h3>밀로의 비너스</h3>
+            <p>
+                아름다움의 여신 아프로디테를 표현한 대리석 조각상인 밀로의 비너스는 헬레니즘 시대 조각의 또 다른 대표작으로, 
+                에게 해 멜로스 섬에서 발견되었습니다. 130년부터 100년 전반에 제작된 것으로 추정되는 이 작품은 팔이 없는 여신상이지만, 
+                완벽한 인체 비율과 우아한 자세로 인해 아름다움의 상징으로 여겨집니다.
+                부드러운 곡선과 섬세한 표현은 헬레니즘 시대 조각의 특징을 잘 보여주고 있으며, 특히 옷감의 표현은 마치 실제 천이 움직이는 듯한 생동감을 자아냅니다. 
+                밀로의 비너스는 단순히 아름다운 여신상을 넘어, 숭고한 사랑과 영혼의 아름다움을 상징하는 작품으로 평가받고 있습니다.
+            </p>
+        </div>
+        <div class="contents-box txt">
+            <h3>사모트라케의 니케</h3>
+            <p>
+                승리의 여신 니케를 표현한 대리석 조각상인 사모트라케의 니케는 헬레니즘 시대 조각의 걸작으로, 
+                에게 해 사모트라케 섬에서 발견되었습니다. 2세기 전반에 제작된 것으로 추정되는 이 작품은 바위 위에 서 있는 니케 여신의 모습을 사실적으로 표현하여 
+                관람자들에게 강렬한 인상을 남깁니다. 힘찬 동작과 드리워진 날개는 자유와 승리를 상징하며, 특히 날개 표현의 아름다움과 역동적인 조형미는 높은 예술적 가치를 
+                지닌 것으로 평가받고 있습니다.
+                사모트라케의 니케는 단순한 조각상을 넘어, 헬레니즘 시대의 정신과 가치를 담은 상징적인 작품입니다. 
+                루브르 박물관의 다리오 방에 전시되어 있는 사모트라케의 니케는 방문객들에게 압도적인 존재감을 선사하며, 
+                거대한 크기와 역동적인 조형미는 관람자들을 니케 여신의 승리와 자유의 세계로 이끌어줍니다.
+            </p>
+        </div>
+    </section>
+
+    <div class="clear"></div>
+    
+    <!-- 오르세 미술관  -->
+    <section id="main_contents_2">
+        <h3>Musée d'Orsay</h3>
+        <p>오르세 미술관</p>      
+    </section>
+    <section>
+        <div class="contents-txt">
+            <p>
+                파리의 심장, 센 강변에 우뚝 솟은 오르세 미술관은 19세기 후반과 20세기 초 프랑스 미술의 황금기를 품은 보석과 같은 곳입니다. 
+                과거 기차역이었던 화려한 건물은 이제 모네, 고흐, 세잔느 등 거장들의 걸작들을 소장하며 매년 수백만 명의 관람객들을 사로잡습니다.
+                인상주의의 낙원으로 불리는 오르세 미술관에는 빛과 색채의 선율을 담은 수많은 작품들이 전시되어 있습니다. 모네의 《일출》과 《고독한 산책자》, 
+                고흐의 《별이 빛나는 밤》과 《자화상》, 그리고 세잔느의 《카르당의 산악》은 단순히 그림을 넘어 방문객들을 예술의 세계로 초대하는 마법 같은 창입니다.
+                하지만 오르세 미술관의 매력은 인상파로만 국한되지 않습니다. 랑부아, 마네, 드가 등 다양한 화가들의 작품들과 더불어 로댕, 카미유 클로델 등의 조각 
+                작품들도 방문객들에게 감동을 선사합니다. 또한, 사진, 도자기, 가구 등 다양한 예술품들이 전시되어 있어 19세기 프랑스 문화의 풍요로운 모습을 한눈에 감상할 수 있습니다.
+                오르세 미술관은 단순히 미술 작품을 감상하는 공간을 넘어 예술과 역사, 그리고 문화가 살아 숨 쉬는 공간입니다.
+                파리 여행을 계획하고 있다면, 꼭 오르세 미술관에 방문하여 19세기 프랑스 미술의 아름다움을 만끽해보세요. 후회 없는 추억이 될 것입니다.
+            </p>
+        </div>
+        <div class="contents-txt">
+            <h3>오르세 미술관의 유명 작품들</h3>
+        </div>
+        
+        <div class="contents-box monet"></div>   
+        <div class="contents-box gogh"></div>
+        <div class="contents-box manet"></div>
+
+        <div class="contents-box txt first">
+            <h3>클로드 모네 《일출》</h3>
+            <p>
+                붉은색, 주황색, 노란색 등 따뜻한 색채가 사용된 이 작품은 마치 캔버스 위에 태양이 떠오르는 듯한 생생한 빛을 선사합니다.
+                붓 자국을 살린 거친 표현은 단순히 풍경을 묘사하는 것을 넘어 빛과 그림자가 춤추는 듯한 역동적인 분위기를 연출합니다.
+                특히, 하늘과 바닷물을 가득 채운 붉은색은 새벽의 아름다움을 더욱 강조하며, 희미하게 보이는 마을 풍경은 관람객들에게 상상의 여지를 남겨줍니다.
+                이 작품은 인상파의 대표적인 작품으로 여겨지며, 빛과 색채를 통해 순간의 감정과 인상을 표현하려는 인상주의의 정수를 보여줍니다.
+                모네는 이 작품을 그리기 위해 르아브르 항구에서 수많은 스케치를 남겼다고 합니다. 그는 끊임없이 변화하는 빛과 색채를 포착하기 위해 노력했으며, 
+                이러한 그의 노력은 《일출》에서 생생하게 드러나고 있습니다.
+            </p>
+        </div>
+        <div class="contents-box txt">
+            <h3>빈센트 반 고흐 《별이 빛나는 밤》</h3>
+            <p>
+                생 폴 드 프로방스 정신병원에 입원했던 반 고흐가 창밖 풍경을 바탕으로 그린 이 작품은 그의 내면의 고뇌와 열정을 표현하는 대표작으로 꼽힙니다.
+                짙은 남색 하늘과 반짝이는 별, 그리고 푸른 마을 풍경이 어우러져 꿈속 같은 아름다움을 선사합니다.
+                격렬한 붓 터치와 소용돌이치는 형태는 마치 그의 혼란스러운 정신 상태를 그대로 보여주는 듯합니다.
+                반 고흐는 정신병원에 있던 기간 동안 창밖 풍경을 바탕으로 수많은 그림을 그렸습니다. 특히, 밤하늘의 별들은 그의 상상력을 자극하며 여러 작품에 등장했습니다. 
+                《별이 빛나는 밤》은 그의 혼돈 속에서도 빛나는 아름다움을 간직하고자 하는 그의 열망을 보여주는 대표적인 작품입니다.
+            </p>
+        </div>
+        <div class="contents-box txt">
+            <h3>에두아르 마네 《풀밭 위의 점심 식사》</h3>
+            <p>
+                오르세 미술관의 대표적인 작품 중 하나인 에두아르 마네의 《풀밭 위의 점심 식사》는 단순한 풍경화를 넘어 당시 사회를 뒤흔든 논쟁의 상징으로 여겨집니다.
+                화려한 옷을 입은 두 명의 남성과 벗은 여성 한 명이 풀밭 위에 앉아 있는 이 작품은 당시의 관습과 사회 질서에 대한 과감한 도전으로 해석되었습니다.
+                특히, 벗은 여성의 모습은 관람객들에게 충격을 주었으며, 이 작품은 도덕성과 예술성에 대한 논쟁을 불러일으켰습니다.
+                하지만, 이러한 논쟁 속에서도 마네는 독창적인 표현과 색채 사용으로 예술적 가치를 인정받았으며, 그의 작품은 이후 프랑스 현대 미술의 발전에 큰 영향을 미쳤습니다.
+                마네는 이 작품을 그리기 위해 친구들과 함께 외곽의 숲으로 나가 스케치를 했습니다. 그는 당시의 사실주의 화가들과는 달리, 인물의 심리적 표현보다는 단순한 형태와 색채에 집중했습니다.
+            </p>
+        </div>
+    </section>
+
+    <div class="clear"></div>
+
+    <footer>
+        <div id="footer-box">
+            <ul>
+                <li>예술의 도시</li>
+                <li>copyright ⓒ JANGSEONGKYUNG ALL RIGHTS RESERVED</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

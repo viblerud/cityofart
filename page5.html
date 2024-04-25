@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예술의 도시, 베를린</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .clear {
+            clear: both;
+        }
+        body {
+            font-family: pretendard;
+        }
+        header {
+            display: flex;
+            height: 60px;
+            margin: 0 auto;
+        }
+        .logo {
+            width: 100px;
+            margin: 28px 0 0 40px;
+        }
+
+        /*menu list*/
+        #menu {
+            margin-top: 38px;
+            margin-left: 20px;
+            align-items: center;
+            float: left;
+            overflow: auto;
+            position: relative;
+        }
+        #menu li {
+            display: inline;
+            margin-left: 40px;
+        }
+        #menu a {
+            text-decoration: none;
+            color: rgba(255, 255, 255);
+            font-weight: 200;
+        }
+        #menu_select {
+            color: white;
+            font-weight: bold;
+        }
+        #menu a:hover {
+            color: white;
+            font-weight: bold;
+            transition: 0.2s ease-out;
+        }  
+        .bgimg {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 800px;
+            background-image: url(./img/bg/베를린.jpg);
+            background-repeat: no-repeat;
+            background-position: center -150px;
+            border-radius: 0 0 50px 50px;
+        }
+        /**/
+        #main_intro {
+            margin: 80px 50px;
+        }
+        #main_intro h4 {
+            position: absolute;
+            margin-top: 10px;
+            font-size: 45px;
+            font-weight: 300;
+            letter-spacing: -3px;
+        }
+        #main_intro h3 {
+            position: absolute;
+            margin-top: 60px;
+            font-size: 100px;
+            letter-spacing: -3px;
+        }
+        #main_intro p {
+            position: absolute;
+            width: 1820px;
+            margin-top: 180px;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+            line-height: 2rem;
+        }
+
+        /**/
+        .main_box {
+            display: inline-block;
+            margin: 700px 10px 0 10px;
+            width: 1820px;
+            height: 300px;
+            border-radius: 50px;
+        }
+        .main_box.bg {
+            background-image: url(./img/bg/루브르05.jpg);
+            background-position: center;
+        }
+        #main_contents{
+            width: 98%;
+            height: 700px;
+            background-image: url(./img/bg/페르가몬.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto 700px;
+            margin: 0 19px 30px 19px;
+            border-radius: 50px;
+        }
+        #main_contents_2 {
+            width: 98%;
+            height: 700px;
+            background-image: url(./img/bg/이스트.jpg);
+            background-position-x: center;
+            background-position-y: -450px;
+            background-repeat: no-repeat;
+            margin: 0 19px 30px 19px;
+            border-radius: 50px;
+        }
+        #main_contents h3, #main_contents_2 h3 {
+            text-align: center;
+            font-size: 80px;
+            letter-spacing: -3px;
+            padding-top: 18rem;
+            font-family: 'Georgia';
+            font-style: italic;
+        }
+        #main_contents p, #main_contents_2 p {
+            text-align: center;
+            font-size: 32px;
+            letter-spacing: -1px;
+            padding-top: 0.1rem;
+            /* font-weight: bold; */
+        }
+        
+
+        .contents-txt {
+            width: 98%;
+            height: auto;
+            margin: 0 19px 50px 19px;
+            /* background-color: rgb(159, 210, 255); */
+        }
+        .contents-txt p {
+            padding: 0 20px;
+            font-size: 20px;
+            line-height: 2rem;
+            letter-spacing: -0.5px;
+        }
+        .contents-txt h3 {
+            padding: 20px 0;
+            font-size: 50px;
+            text-align: center;
+            letter-spacing: -1.5px;
+        }
+        
+        .contents-box {
+            display: inline-block;
+            width: 599px;
+            height: 599px;
+            margin: 20px 19px 0 0;
+            border-radius: 25px;
+            /* background-color: antiquewhite; */
+        }
+    
+        /*피렌체*/
+        .contents-box-2.img1 {
+            background-image: url(./img/bg/이스트02.jpg);
+            background-position: center;
+            background-size: 920px;
+            background-repeat: no-repeat;
+        }
+        .contents-box-2.img2 {
+            position: relative;
+            margin-right: 38px;
+            margin-left: 0;
+            background-image: url(./img/bg/이스트04.jpg);
+            background-position: center;
+            background-size: auto 599px;
+            background-repeat: no-repeat;
+        }
+        .contents-box-2.img3 {
+            background-image: url(./img/bg/이스트03.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: 100px;
+        }
+        .contents-box-2.img4 {
+            position: relative;
+            margin-right: 38px;
+            margin-left: 0;
+            background-image: url(./img/bg/이스트05.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: 100px;
+        }
+
+        .contents-box.txt {
+            position: relative;
+            margin: 5px 0 50px 19px;
+            width: 599px;
+            height: 500px;
+        }
+
+        /*contents box 2*/
+        .contents-box-2 {
+            display: inline-block;
+            width: 910px;
+            height: 599px;
+            margin: 20px 19px 0 38px;
+            border-radius: 25px;
+            /* background-color: antiquewhite; */
+        }
+        .contents-box-2.moon {
+            background-image: url(./img/bg/이슈타르.jpg);
+            background-position: center;
+            background-size: auto 599px;
+            background-repeat: no-repeat;
+        }
+        .contents-box-2.bom {
+            background-image: url(./img/bg/페르가몬02.jpg);
+            background-position: center -80px;
+            background-size: auto 700px;
+            background-repeat: no-repeat;
+            margin-bottom: 100px;
+        }
+        .contents-box-2.txt {
+            position: relative;
+            width: 910px;
+            height: 599px;
+            margin-right: 38px;
+            margin-left: 0;
+        }
+        .contents-box-2.txt h3{
+            position: absolute;
+            font-size: 30px;
+            letter-spacing: -1.5px;
+            margin-top: 10px;
+            padding: 0 10px;
+        }
+        .contents-box-2.txt.first {
+            margin-left: 38px;
+            margin-bottom: 100px;
+        }
+        .contents-box-2.txt.fin {
+            margin-bottom: 100px;
+        }
+        .contents-box-2.txt p{
+            position: absolute;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+            line-height: 2.2rem;
+            margin-top: 55px;
+            padding: 0 10px;
+        }
+        
+        .contents-box-2.txt ul{
+            position: absolute;
+            font-size: 20px;
+            letter-spacing: -1.5px;
+            margin-top: 460px;
+            padding-left: 33px;
+            line-height: 2.3rem;
+        }
+        .contents-box-2.txt h4{
+            position: absolute;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+            line-height: 2.2rem;
+            margin-top: 420px;
+            padding: 0 10px;
+        }
+        
+
+        /*footer*/
+        footer {
+            width: 1920px;
+            height: 80px;
+            margin: 0 auto;
+            border-top: solid 1px rgb(0, 0, 0);
+            /* background-color: rgba(255, 255, 255, 0.2); */
+        }
+        #footer-box ul{
+            list-style: none;
+            font-size: 13px;
+            padding: 25px 0 0 50px;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="./index.html"><img src="./img/logo.svg" width="100px"></a>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="./page1.html">파리</a></li>
+                <li><a href="./page2.html">뉴욕</a></li>
+                <li><a href="./page3.html">피렌체</a></li>
+                <li><a href="./page4.html">로마</a></li>
+                <li id="menu_select">베를린</li>
+            </ul>
+        </div>
+        <div class="bgimg"></div>
+    </header>
+
+    <div class="clear"></div>
+
+    <section id="main_intro">
+        <div class="main_box">
+            <h4>베를린은 왜 예술의 도시일까?</h4>
+            <h3>Berlin</h3>
+            <p>          
+                베를린은 예술의 도시로 알려져 있습니다. 이 도시는 다양한 문화적 배경과 역사적 유산을 갖고 있으며, 예술가들에게 창의적 자극을 주는 다채로운 환경을 제공합니다. 
+                베를린은 세계적으로 유명한 미술 갤러리와 박물관을 보유하고 있으며, 거리 예술과 공공 미술 프로젝트에도 열려 있는 도시입니다. 
+                또한, 베를린은 과거 동서 갈라진 분단의 흔적을 예술적으로 반영하는 곳으로서의 역할도 하고 있습니다. 
+                이러한 다양성과 역동성은 베를린을 예술가들과 예술 애호가들의 매력적인 목적지로 만들어 주고 있습니다.            
+            </p>
+        </div>
+    </section>
+
+    <div class="clear"></div>
+
+    <!-- 페르가몬 박물관 -->
+    <section id="main_contents">
+        <h3>Pergamon Museum</h3>
+        <p>페르가몬 박물관</p>      
+    </section>
+    <section>
+        <div class="contents-txt">
+            <p>
+                베를린의 박물관섬 안에 위치해 있습니다. 
+                이곳은 알프레트 메셀과 루트비히 호프만에 의해 설계되었으며, 1910년부터 1930년까지 약 20년에 걸쳐 완공되었습니다. 
+                내부에는 제우스의 대제단 (또는 '페르가몬 제단')을 비롯한 밀레토스의 시장문, 이슈타르 문 등 기념비적 건축물들이 유적지 현지에서 출토된 그대로 옮겨져, 실제 크기로 재건되어 전시되어 있습니다.
+                고대 바벨론, 메소포타미아, 그리스, 로마의 유적과 조각품을 전시하는 세계적으로 유명한 박물관입니다. 
+                특히, 박물관은 제2차 세계대전 이후 독일에서 재건된 퍼가몬 알타르를 비롯하여 동유럽의 유서 깊은 유물을 소장하고 있습니다. 
+                또한, 이 박물관은 특별 전시와 학술적 프로그램으로 유명하며, 고대 문명에 대한 흥미로운 통찰력을 제공합니다.
+                2023년 10월, 박물관은 방문객들을 위해 완전히 문을 닫았으며, 
+                현재 종합적인 보수 공사의 실행을 위해 2037년에서 2043년까지 14년에서 20년 동안 대부분 문을 닫을 것으로 예상됩니다.
+            </p>
+        </div>
+        <div class="contents-txt">
+            <h3>페르가몬 박물관의 유명 작품들</h3>
+        </div>
+        
+        <div class="contents-box-2 moon"></div><!-- 이슈타르의 문 -->  
+        <div class="contents-box-2 txt">
+            <h3>이슈타르의 문</h3>
+            <p>
+                이는 1900년대 초기에 바빌론에서 발굴한 벽돌들을 독일로 가져와 다시 재현한 것이다. 이 문은 높이가 14m이고, 너비가 30m이다. 
+                이 문을 발굴할 때, 14m에 달하는 성문의 기초도 함께 발견되었다.
+                지금까지 있었던 가장 거대한 복원 프로젝트들 중 하나가 바로 이슈타르 문과 그 앞 도로의 복원인데, 이는 발굴된 유리 벽돌 조각들을 모두 하나하나 다시 붙이고, 
+                조심스레 운반하여 다시 쌓아올리는 과정들로 이루어졌다. 완전히 사라진 벽돌들을 대체하기 위해 특수 제작된 틀들을 만들어 당대와 똑같은 벽돌들을 생산해냈다. 
+                이슈타르 문은 사실 이중문인데, 현재 우리가 박물관에서 볼 수 있는 것은 더 작은 앞문이다. 뒷문은 너무 전시하기에는 크기가 커 전시되지 못하고 창고 안에 있다. 
+                또한 이슈타르 문에 있던 동물 조각 벽돌들은 페르가몬 박물관 뿐만 아니라 세계 곳곳에 흩어져 전시되고 있다고 한다.
+            </p>
+        </div>
+        <div class="contents-box-2 bom"></div>
+        <div class="contents-box-2 txt fin">
+            <h3>The East frieze of the Altar: Zeus</h3>
+            <p>
+                페르가몬 박물관의 동쪽 프리즈는 올림포스 신들과 헤라클레스가 거인족과의 전투를 펼치는 장면을 보여줍니다. 
+                제우스의 네 마리 말은 날씨의 신을 상징하며, 거인들을 공격합니다. 거인의 방패에는 마케도니아 왕들의 별 문양이 새겨져 있습니다. 
+                프리즈의 중심에는 헤라클레스와 제우스가 초점을 맞추고, 제우스는 거인의 지도자를 공격하고 아테나가 오른쪽으로 돌진하는 장면이 표현됩니다.
+            </p>
+        </div>        
+    </section>
+
+    <div class="clear"></div>
+    
+    <!-- 이스트 사이드 갤러리 -->
+    <section id="main_contents_2">
+        <h3>East Side Gallery</h3>
+        <p>이스트 사이드 갤러리</p>      
+    </section>
+    <section>
+        <div class="contents-txt">
+            <p>
+                베를린의 이스트 사이드 갤러리는 동쪽 베를린의 벽 유지로 재탄생한 거대한 거리 예술 갤러리입니다. 
+                이 갤러리는 전 세계에서 유명한 거리 예술가들의 작품으로 장식되어 있으며, 그래피티와 미술이 벽 전체를 덮고 있습니다. 
+                이스트 사이드 갤러리는 베를린 분단의 역사적인 유적지로서도 중요하며, 예술적 표현을 통해 평화와 통일을 상징하는 명소로 인식되고 있습니다. 
+                갤러리는 또한 문화적인 이벤트와 공연을 자주 개최하여 관광객과 예술 애호가들의 인기 있는 장소로 자리매김하고 있습니다. 
+                이스트 사이드 갤러리는 독특하고 역동적인 베를린의 예술적 분위기를 체험할 수 있는 필수적인 관광 명소입니다.
+            </p>
+        </div>
+        <div class="contents-txt">
+            <h3>이스트 사이드 갤러리의 모습들</h3>
+        </div>
+        
+        <div class="contents-box-2 img1"></div>   
+        <div class="contents-box-2 img2"></div>
+        <div class="contents-box-2 img3"></div>
+        <div class="contents-box-2 img4"></div> 
+    </section>
+
+    <div class="clear"></div>
+
+    <footer>
+        <div id="footer-box">
+            <ul>
+                <li>예술의 도시</li>
+                <li>copyright ⓒ JANGSEONGKYUNG ALL RIGHTS RESERVED</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

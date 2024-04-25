@@ -1,0 +1,84 @@
+/* 마우스 오버할 때 비행기 */
+* {
+    margin: 0;
+    padding: 0;
+}
+.clear {
+    clear: both;
+}
+body {
+    background-image: url(./img/bg/paris06.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -150px;
+    font-family: pretendard;
+    transition: background-image 0.5s ease-out;
+}
+header {
+    display: flex;
+    height: 60px;
+    margin: 0 auto;
+}
+.logo {
+    width: 100px;
+    margin: 28px 0 0 40px;
+}
+
+/*menu list*/
+#menu {
+    margin-top: 38px;
+    margin-left: 20px;
+    align-items: center;
+    float: left;
+    overflow: auto;
+}
+#menu li {
+    display: inline;
+    margin-left: 40px;
+}
+#menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255);
+    font-weight: 200;
+}
+#menu a:hover {
+    color: white;
+    font-weight: bold;
+    transition: 0.2s ease-out;
+}
+
+.maintitle {
+    color: white;
+    text-align: center;
+}
+.maintitle h1 {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    font-size: 150px;
+    letter-spacing: -2px;
+}
+.maintitle p {
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    font-size: 30px;
+}
+
+/*footer*/
+footer {
+    width: 1920px;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    border-top: solid 1px white;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+}
+.footer-box ul{
+    list-style: none;
+    font-size: 13px;
+    padding: 25px 0 0 50px;
+    color: white;
+}

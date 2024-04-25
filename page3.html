@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예술의 도시, 피렌체</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .clear {
+            clear: both;
+        }
+        body {
+            font-family: pretendard;
+        }
+        header {
+            display: flex;
+            height: 60px;
+            margin: 0 auto;
+        }
+        .logo {
+            width: 100px;
+            margin: 28px 0 0 40px;
+        }
+
+        /*menu list*/
+        #menu {
+            margin-top: 38px;
+            margin-left: 20px;
+            align-items: center;
+            float: left;
+            overflow: auto;
+            position: relative;
+        }
+        #menu li {
+            display: inline;
+            margin-left: 40px;
+        }
+        #menu a {
+            text-decoration: none;
+            color: rgba(255, 255, 255);
+            font-weight: 200;
+        }
+        #menu_select {
+            color: white;
+            font-weight: bold;
+        }
+        #menu a:hover {
+            color: white;
+            font-weight: bold;
+            transition: 0.2s ease-out;
+        }  
+        .bgimg {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 800px;
+            background-image: url(./img/bg/피렌체01.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 0 0 50px 50px;
+        }
+        /**/
+        #main_intro {
+            margin: 80px 50px;
+        }
+        #main_intro h4 {
+            position: absolute;
+            margin-top: 10px;
+            font-size: 45px;
+            font-weight: 300;
+            letter-spacing: -3px;
+        }
+        #main_intro h3 {
+            position: absolute;
+            margin-top: 60px;
+            font-size: 100px;
+            letter-spacing: -3px;
+        }
+        #main_intro p {
+            position: absolute;
+            width: 1820px;
+            margin-top: 180px;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+            line-height: 2rem;
+        }
+
+        /**/
+        .main_box {
+            display: inline-block;
+            margin: 700px 10px 0 10px;
+            width: 1820px;
+            height: 300px;
+            border-radius: 50px;
+        }
+        .main_box.bg {
+            background-image: url(./img/bg/루브르05.jpg);
+            background-position: center;
+        }
+        #main_contents{
+            width: 98%;
+            height: 700px;
+            background-image: url(./img/bg/우피치.jpg);
+            background-position: center -60px;
+            background-repeat: no-repeat;
+            margin: 0 19px 30px 19px;
+            border-radius: 50px;
+        }
+        #main_contents_2 {
+            width: 98%;
+            height: 700px;
+            background-image: url(./img/bg/피렌체.jpg);
+            background-position-x: center;
+            background-position-y: -450px;
+            background-repeat: no-repeat;
+            margin: 0 19px 30px 19px;
+            border-radius: 50px;
+        }
+        #main_contents h3, #main_contents_2 h3 {
+            text-align: center;
+            font-size: 80px;
+            letter-spacing: -3px;
+            padding-top: 18rem;
+            font-family: 'Georgia';
+            font-style: italic;
+        }
+        #main_contents p, #main_contents_2 p {
+            text-align: center;
+            font-size: 32px;
+            letter-spacing: -1px;
+            padding-top: 0.1rem;
+            /* font-weight: bold; */
+        }
+        
+
+        .contents-txt {
+            width: 98%;
+            height: auto;
+            margin: 0 19px 50px 19px;
+            /* background-color: rgb(159, 210, 255); */
+        }
+        .contents-txt p {
+            padding: 0 20px;
+            font-size: 20px;
+            line-height: 2rem;
+            letter-spacing: -0.5px;
+        }
+        .contents-txt h3 {
+            padding: 20px 0;
+            font-size: 50px;
+            text-align: center;
+            letter-spacing: -1.5px;
+        }
+        
+        .contents-box {
+            display: inline-block;
+            width: 599px;
+            height: 599px;
+            margin: 20px 19px 0 0;
+            border-radius: 25px;
+            /* background-color: antiquewhite; */
+        }
+        .contents-box.monalisa{
+            margin-left: 38px;
+            background-image: url(./img/bg/모나리자.jpg);
+            background-size: 1300px;
+            background-position-x: center;
+            background-position-y: -690px;
+        }
+        .contents-box.venus{
+            background-image: url(./img/bg/비너스.jpg);
+            background-size: 650px;
+            background-position-x: -50px;
+            background-position-y: -60px;
+            background-repeat: no-repeat;
+        }
+        .contents-box.nike{
+            background-image: url(./img/bg/니케.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /*피렌체*/
+        .contents-box-2.img1 {
+            background-image: url(./img/bg/피렌체02.jpg);
+            background-position: center;
+            background-size: 920px;
+            background-repeat: no-repeat;
+        }
+        .contents-box-2.img2 {
+            position: relative;
+            width: 910px;
+            height: 599px;
+            margin-right: 38px;
+            margin-left: 0;
+            background-image: url(./img/bg/피렌체03.jpg);
+            background-position: center -80px;
+            background-size: auto 700px;
+            background-repeat: no-repeat;
+        }
+        .contents-box.img3{
+            margin-left: 38px;
+            background-image: url(./img/bg/피렌체04.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 700px;
+            margin-bottom: 100px;
+        }
+        .contents-box.img4{
+            background-image: url(./img/bg/피렌체05.jpg);
+            background-size: 900px;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: 100px;
+        }
+        .contents-box.img5{
+            background-image: url(./img/bg/피렌체06.jpg);
+            background-size: 800px;
+            background-position: center -500px;
+            background-repeat: no-repeat;
+            margin-bottom: 100px;
+        }
+
+        .contents-box.txt {
+            position: relative;
+            margin: 5px 0 50px 19px;
+            width: 599px;
+            height: 500px;
+        }
+
+        /*contents box 2*/
+        .contents-box-2 {
+            display: inline-block;
+            width: 910px;
+            height: 599px;
+            margin: 20px 19px 0 38px;
+            border-radius: 25px;
+            /* background-color: antiquewhite; */
+        }
+        .contents-box-2.venus {
+            background-image: url(./img/bg/비너스명화.jpg);
+            background-position: center;
+            background-size: auto 599px;
+            background-repeat: no-repeat;
+        }
+        .contents-box-2.bom {
+            background-image: url(./img/bg/봄.jpg);
+            background-position: center -80px;
+            background-size: auto 700px;
+            background-repeat: no-repeat;
+        }
+        .contents-box-2.davinci {
+            background-image: url(./img/bg/수태고지.jpg);
+            background-position: center;
+            background-size: auto 600px;
+            background-repeat: no-repeat;
+            margin-bottom: 100px;
+        }
+        .contents-box-2.txt {
+            position: relative;
+            width: 910px;
+            height: 599px;
+            margin-right: 38px;
+            margin-left: 0;
+        }
+        .contents-box-2.txt h3{
+            position: absolute;
+            font-size: 30px;
+            letter-spacing: -1.5px;
+            margin-top: 10px;
+            padding: 0 10px;
+        }
+        .contents-box-2.txt p{
+            position: absolute;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+            line-height: 2.2rem;
+            margin-top: 55px;
+            padding: 0 10px;
+        }
+        .contents-box-2.txt.fin {
+            margin-bottom: 100px;
+        }
+        .contents-box-2.txt ul{
+            position: absolute;
+            font-size: 20px;
+            letter-spacing: -1.5px;
+            margin-top: 460px;
+            padding-left: 33px;
+            line-height: 2.3rem;
+        }
+        .contents-box-2.txt h4{
+            position: absolute;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+            line-height: 2.2rem;
+            margin-top: 420px;
+            padding: 0 10px;
+        }
+
+        /*footer*/
+        footer {
+            width: 1920px;
+            height: 80px;
+            margin: 0 auto;
+            border-top: solid 1px rgb(0, 0, 0);
+            /* background-color: rgba(255, 255, 255, 0.2); */
+        }
+        #footer-box ul{
+            list-style: none;
+            font-size: 13px;
+            padding: 25px 0 0 50px;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="./index.html"><img src="./img/logo.svg" width="100px"></a>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="./page1.html">파리</a></li>
+                <li><a href="./page2.html">뉴욕</a></li>
+                <li id="menu_select">피렌체</li>
+                <li><a href="./page4.html">로마</a></li>
+                <li><a href="./page5.html">베를린</a></li>
+            </ul>
+        </div>
+        <div class="bgimg"></div>
+    </header>
+
+    <div class="clear"></div>
+
+    <section id="main_intro">
+        <div class="main_box">
+            <h4>피렌체는 왜 예술의 도시일까?</h4>
+            <h3>Firenze</h3>
+            <p>          
+                피렌체는 예술의 도시로서 르네상스의 탄생지로 알려져 있습니다. 
+                이 도시는 세계적으로 유명한 조각가 미켈란젤로의 출신지이며, 그의 대표작인 다윗 조각상은 피렌체의 미켈란젤로 광장에 위치하고 있습니다. 
+                피렌체는 또한 우피치 갈러리아 미술관과 같은 다양한 미술관들로 유명하며, 이곳에서는 보고티코, 브루노레스키, 레오나르도 다 빈치와 같은 유명한 르네상스 예술가들이 탄생하였습니다. 
+                이들 예술가들의 작품은 세계적으로 인정받고 있으며, 피렌체의 건축물들도 독특하고 아름답습니다. 
+                피렌체의 대표적인 건축물로는 두오모 성당과 피티 궁전이 있습니다.
+                이 도시는 또한 예술과 문화의 중심지로서 르네상스 시대에 인간 중심적인 예술과 문화의 재건을 이끌어내는 역할을 하였습니다.    
+            </p>
+        </div>
+    </section>
+
+    <div class="clear"></div>
+
+    <!-- 우피치 갤러리 -->
+    <section id="main_contents">
+        <h3>Galleria degli Uffizi</h3>
+        <p>우피치 갤러리</p>      
+    </section>
+    <section>
+        <div class="contents-txt">
+            <p>
+                우피치 갤러리는 이탈리아 피렌체에 위치한 세계적으로 유명한 미술관입니다. 
+                이 갤러리는 피렌체의 중심부에 있으며, 이탈리아 르네상스 시대의 미술 작품으로 가득 차 있습니다. 
+                갤러리에는 보통 16세기와 17세기의 유명한 화가들의 작품들이 소장되어 있으며, 
+                이 중에서도 보통 보티첼리, 레오나르도 다빈치, 미켈란젤로 부아르로티, 그리고 라파엘로와 같은 다양한 유명 화가의 작품을 볼 수 있습니다. 
+                우피치 갤러리는 이탈리아 르네상스 예술의 가장 중요한 수집품을 보유하고 있으며, 그 중에는 "비너스의 탄생"과 "피렌체의 제야"와 같은 유명한 작품들도 있습니다. 
+                또한, 갤러리의 건물 자체도 르네상스 양식의 아름다운 건축물로 유명하며, 갤러리 내부는 화려한 천장 장식과 훌륭한 조각품들로 장식되어 있습니다. 
+                우피치 갤러리는 피렌체를 방문하는 관광객들에게 르네상스 예술의 보고로 손꼽히는 장소 중 하나이며, 이탈리아의 문화와 예술을 경험할 수 있는 귀중한 장소입니다.
+            </p>
+        </div>
+        <div class="contents-txt">
+            <h3>우피치 갤러리의 유명 작품들</h3>
+        </div>
+        
+        <div class="contents-box-2 venus"></div><!-- 비너스의 탄생 -->   
+        <div class="contents-box-2 txt">
+            <h3>산드로 보티첼리 《비너스의 탄생》</h3>
+            <p>
+                <b>비너스의 탄생</b>은 산드로 볼로니아에 의해 1484년에 그려진 이탈리아 르네상스의 유명한 작품으로, 로렌조 디 피에르프란체스코 데 메디치의 의뢰로 제작되었습니다. 
+                작품은 로마 신화에서 비너스의 탄생을 다루며, 제피로스(Zephyr)와 클로리스(Chloris)가 비너스를 환영하고 있는 장면을 묘사합니다. 
+                이 작품은 르네상스 예술의 아이콘 중 하나로 여겨지며, 고전주의적인 주제와 인문주의적인 아이디어를 표현한 것으로 해석됩니다. 
+                특히, 비너스의 탄생은 신플라톤주의 철학과 연관되어 있으며, 인간과 자연의 조화를 강조합니다. 
+                볼로니아의 기술적 완성도와 아름다운 색채는 르네상스 회화의 뛰어난 예시로 평가되며, 이 작품은 당시의 예술 발전과 문화적 변화를 보여주는 중요한 증거로 간주됩니다.
+            </p>
+        </div>  
+
+        <div class="contents-box-2 bom"></div>
+        <div class="contents-box-2 txt">
+            <h3>산드로 보티첼리 《봄》</h3>
+            <p>
+                <b>봄</b>은 르네상스 시대의 거장이 그린 대표적인 작품 중 하나입니다. 
+                이 작품은 자연의 생명력과 재생의 상징으로서 봄의 아름다움을 표현하고 있습니다. 그림 속에는 우아하게 피어난 꽃과 나뭇가지, 신선한 녹음과 풍부한 빛과 그림자의 표현이 눈에 띕니다. 
+                보티첼리는 미적인 조화와 정밀한 자세로 자연의 아름다움을 담아내어, 특히 꽃과 식물의 섬세한 표현은 그의 예술적 스타일을 대변하고 있습니다. 
+                "봄"은 불멸의 아름다움과 자연의 순환에 대한 믿음을 상징적으로 전달하며, 보티첼리의 예술이 자연과의 조화를 통해 우리에게 전하는 미적 메시지를 전달합니다.
+            </p>
+        </div>
+
+        <div class="contents-box-2 davinci"></div>
+        <div class="contents-box-2 txt fin">
+            <h3>레오나르도 다빈치 《수태고지》</h3>
+            <p>
+                <b>수태고지</b>는 레오나르도 다빈치의 대표작 중 하나로, 성모 마리아에게 천사 가브리엘이 예수 그리스도의 탄생을 알리는 장면을 그린 작품입니다. 
+                마리아와 천사의 부드럽고 우아한 표현, 조명과 그림자의 조화, 그리고 신앙적인 상징들이 작품을 특징짓습니다. 
+                다빈치의 뛰어난 예술 기술과 종교적 감수성이 잘 결합된 작품으로, 그의 인간적 감정과 예술적 재능을 잘 보여주고 있습니다.
+            </p>
+        </div>
+        
+    </section>
+
+    <div class="clear"></div>
+    
+    <!-- 오르세 미술관  -->
+    <section id="main_contents_2">
+        <h3>Cattedrale di Santa Maria del Fiore</h3>
+        <p>피렌체 대성당</p>      
+    </section>
+    <section>
+        <div class="contents-txt">
+            <p>
+                피렌체 대성당(또는 산타 마리아 델 피오렌테 대성당)은 이탈리아 피렌체에 위치한 세계적으로 유명한 건축물로, 르네상스 건축의 뛰어난 예로 알려져 있습니다. 
+                대성당은 1296년에 건설이 시작되었고, 1436년에 완공되었습니다. 대성당의 가장 눈에 띄는 특징 중 하나는 대리석으로 만들어진 거대한 돔 형태의 지붕으로, 
+                이는 르네상스 건축의 기술적 역작 중 하나로 평가되고 있습니다. 건축가 피리올로 다 브룬렐레스키가 이 건축물의 설계를 이끌었으며, 
+                그의 대성당은 강렬한 비례와 대리석의 아름다운 조각으로 잘 알려져 있습니다. 
+                대성당의 내부에는 고대 예배당의 정신을 간직한 많은 예술품과 조각품이 전시되어 있으며, 성당의 외부는 피렌체 시내의 아름다운 풍경을 이끌어내는 주요 명소 중 하나입니다.            </p>
+        </div>
+        <div class="contents-txt">
+            <h3>피렌체 대성당의 모습들</h3>
+        </div>
+        
+        <div class="contents-box-2 img1"></div>   
+        <div class="contents-box-2 img2"></div>
+        <div class="contents-box img3"></div>
+        <div class="contents-box img4"></div>
+        <div class="contents-box img5"></div>
+    </section>
+
+    <div class="clear"></div>
+
+    <footer>
+        <div id="footer-box">
+            <ul>
+                <li>예술의 도시</li>
+                <li>copyright ⓒ JANGSEONGKYUNG ALL RIGHTS RESERVED</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
